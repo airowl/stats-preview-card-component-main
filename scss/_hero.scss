@@ -1,0 +1,71 @@
+.hero{
+    text-align: center;
+
+    @include for-desktop-only{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 92.5rem;
+    }
+
+
+    &__photo{
+        background: url(../images/image-header-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 15.5rem;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        @include for-desktop-only{
+            order: 2;
+            background: url(../images/image-header-desktop.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 50%;
+            height: 100%;
+            border-top-left-radius: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+    }
+
+
+    &__text{
+        background-color: $darkDesaturatedBlue;
+        padding: 2.3125rem 1.8125rem 0 1.8125rem;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        @include for-desktop-only{
+            order: 1;
+            width: 50%;
+            height: auto;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            text-align: start;
+            padding-left: 6.0625rem;
+            padding-right: 10.25rem;
+            padding-top: 6.5625rem;
+        }
+    }
+}
+
+.three{
+
+    @include for-desktop-only{
+        display: flex;
+    }
+
+    &__1, &__2, &__3{
+
+        @include for-desktop-only{
+            margin-right: 5.6875rem;
+        }
+    }
+}
